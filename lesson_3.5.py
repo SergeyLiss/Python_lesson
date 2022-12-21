@@ -1,6 +1,6 @@
 # Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
 
-number = -8
+number = 8
 
 def NegaFibonacci(num): # Реализация 1
     array = [0 for i in range((num<<1)+1)]
@@ -19,8 +19,7 @@ def Fibonachi(number): # Реализация 2
     return fresult
 
 
-farray = [Fibonachi(i) for i in range(-number, number)]
-
+farray = [Fibonachi(i) for i in range(-number, (number+1))]
 
 print(NegaFibonacci(number))
 print(farray)
