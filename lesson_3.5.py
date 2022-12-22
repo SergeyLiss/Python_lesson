@@ -1,6 +1,7 @@
 # Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
 
-number = 8
+number = 71
+
 
 def NegaFibonacci(num): # Реализация 1
     array = [0 for i in range((num<<1)+1)]
@@ -14,6 +15,7 @@ def NegaFibonacci(num): # Реализация 1
     return array
 
 def Fibonachi(number): # Реализация 2
+    # f = (1+pow(5,0.5)) / 2.0
     f = 1.6180339887498948482045868343656 # Золотое сечение
     fresult = int((pow(f,number) - pow(-f, -number)) / (2 * f - 1)) # Формула Бине
     return fresult
@@ -21,5 +23,5 @@ def Fibonachi(number): # Реализация 2
 
 farray = [Fibonachi(i) for i in range(-number, (number+1))]
 
-print(NegaFibonacci(number))
-print(farray)
+print(NegaFibonacci(number)[2*(number):])
+print(farray[2*(number):])
