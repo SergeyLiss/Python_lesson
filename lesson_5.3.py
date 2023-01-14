@@ -1,5 +1,4 @@
 # Создайте программу для игры в ""Крестики-нолики"".
-#
 from tkinter import *
 from random import randint as rand
 
@@ -8,7 +7,7 @@ class T3(Frame):
 
     def __init__(self) -> None:
         super().__init__()
-        self.level = ["Стандартный", "Посложней", "Безграничный"] # Сложности игры
+        self.level = ["Стандартный", "Посложней", "Безграничный", "До конца"] # Сложности игры
         self.statusbar = [] # Строка состояния
         self.level_game = 0 # Сложность игры
         self.field = ""
@@ -42,7 +41,7 @@ class T3(Frame):
         submenubar = Menu(menubar)
 
         menubar.add_cascade(label="Уровень игры", menu=submenubar)
-        for i in range(3):
+        for i in range(4):
             submenubar.add_command(label=self.level[i], command=lambda x=i : self.Change_statusbar(x))
 
         menubar.add_command(label="Новая игра", command=self.NewGame)
