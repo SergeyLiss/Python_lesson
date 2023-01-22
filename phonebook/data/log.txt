@@ -1,0 +1,3 @@
+2023-01-23 01:03:07	open/create phonebook=my_phonebook.csv
+2023-01-23 01:03:20	open/create phonebook=my_phonebook.csv
+2023-01-23 01:03:23	delete phonebook
