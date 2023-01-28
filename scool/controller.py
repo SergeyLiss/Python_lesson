@@ -21,7 +21,6 @@ def Deistvie():
         elif ch == '1':
             student = interaction.AddStudent(student)
         elif ch == '2':
-            print('3333')
             test.lessons_list.append(interaction.AddLesson())
         elif ch == '3':
             assessmant = interaction.AddAssessment(assessmant, student, test.lessons_list)
