@@ -71,7 +71,10 @@ def NewGame(message):
 @botCG.message_handler(content_types = "text")
 def Controller(message):
     if message.text in sweets:
-        Steps(message, int(message.text), True)
+        if text.temp_3 != 0:
+            Steps(message, int(message.text), True)
+        else:
+            botCG.send_message(message.chat.id, 'Игра окончена.\nНачните сначала ->\n/newgame')
     elif message.text in text.choice_level:
         text.level_flag = True if message.text == text.choice_level[1] else False
         NewGame(message)
